@@ -1,0 +1,68 @@
+What is HTML
+---------------
+HTML is a markup language that defines the structure of your content. 
+
+What is Css
+------------
+CSS (Cascading Style Sheets) is the code that styles web content.
+CSS is a style sheet language. 
+
+Types Of Selectors in Css
+------------------------
+
+ID selector
+---------
+The element on the page with the specified ID. On a given HTML page, each id value should be unique.
+Ex:
+#my-id
+selects <p id="my-id"> or <a id="my-id">
+
+Class Selector
+--------------
+Ex:
+.my-class
+selects <p class="my-class"> and <a class="my-class">
+
+Attribute Selector
+--------------------
+Ex:
+img[src]
+selects <img src="myimage.png"> but not <img>
+
+Pseudo-class selector
+--------------------
+The specified element(s), but only when in the specified state. (For example, when a cursor hovers over a link.)	
+Ex:
+a:hover
+selects <a>, but only when the mouse pointer is hovering over the link.
+
+Box-Model
+----------
+
+CSS layout is mostly based on the box model. Each box taking up space on your page has properties like:
+
+Padding, the space around the content. In the example below, it is the space around the paragraph text.
+Border, the solid line that is just outside the padding.
+Margin, the space around the outside of the border.
+
+Centering the image
+------------------
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+What is Javascript
+-------------------------
+
+JavaScript is the programming language that you use to add interactive features to your website. Some examples could be games, things that happen when buttons are pressed or data is entered in forms, dynamic styling effects, animation.
+
+
+If javascript files are external
+-------------------------------
+<script src="scripts/main.js"></script>
+
+If javascript code snippets are Internal
+-----------------------------
+<script type="text/javascript"></script>
