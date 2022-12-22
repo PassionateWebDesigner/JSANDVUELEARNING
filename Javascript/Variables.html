@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Javascript Variables-->
+    <div class="w3-info">
+        <h3>4 Ways to Declare a JavaScript Variable:</h3>
+        <ul>
+        <li>Using <code class="w3-codespan">var</code></li>
+        <li>Using <code class="w3-codespan">let</code></li>
+        <li>Using <code class="w3-codespan">const</code></li>
+        <li>Using nothing</li>
+        </ul>
+        <p>Variables are containers that store values. </p>
+        <p>Note that variables may hold values that have different data types:</p>
+<figure class="table-container"><table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">Variable</th>
+      <th scope="col">Explanation</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">String</th>
+      <td>
+        This is a sequence of text known as a string. To signify that the value
+        is a string, enclose it in single quote marks.
+      </td>
+      <td><code>let myVariable = 'Bob';</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number</th>
+      <td>This is a number. Numbers don't have quotes around them.</td>
+      <td><code>let myVariable = 10;</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Boolean</th>
+      <td>
+        This is a True/False value. The words <code>true</code> and
+        <code>false</code> are special keywords that don't need quote marks.
+      </td>
+      <td><code>let myVariable = true;</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Array</th>
+      <td>
+        This is a structure that allows you to store multiple values in a single
+        reference.
+      </td>
+      <td>
+        <code>let myVariable = [1,'Bob','Steve',10];</code><br>Refer to each
+        member of the array like this:<br><code>myVariable[0]</code>,
+        <code>myVariable[1]</code>, etc.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Object</th>
+      <td>
+        This can be anything. Everything in JavaScript is an object and can be
+        stored in a variable. Keep this in mind as you learn.
+      </td>
+      <td>
+        <code>let myVariable = document.querySelector('h1');</code><br>All of
+        the above examples too.
+      </td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+<h1>Comments types</h1>
+<p>Single line comments(//) Multi line Comments (/*
+    Everything in between is a comment.
+    */
+    )</p>
+    <h2>Operators</h2>
+    <p>+,-,*,/,=,===,!,!=</p>
+    <div class="w3-note">
+        <h2>When to use JavaScript const?</h2>
+        <p><b>Always declare a variable with <code class="w3-codespan">const</code> when you know that
+        the value should not be changed.</b></p>
+        <p>Use <code class="w3-codespan">const</code> when you declare:</p>
+        <ul>
+        <li>A new Array</li>
+        <li>A new Object</li>
+        <li>A new Function</li>
+        <li>A new RegExp</li>
+        </ul>
+        </div>
+        
+        <hr>
+        <h2>Constant Objects and Arrays</h2>
+        <p>The keyword <code class="w3-codespan">const</code> is a little misleading.</p>
+        <p>It does not define a constant value. It defines a constant reference to a value.</p>
+        <p>Because of this you can NOT:</p>
+        <ul>
+        <li>Reassign a constant value</li>
+        <li>Reassign a constant array</li>
+        <li>Reassign a constant object</li>
+        </ul>
+        <ul>
+        <p>But you CAN:</p>
+        <li>Change the elements of constant array</li>
+        <li>Change the properties of constant object</li>
+        </ul>
+        
+        <hr>
+        <h2>Constant Arrays</h2>
+        <p>You can change the elements of a constant array:</p>
+        <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh">
+        // You can create a constant array:<br>
+        const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br><br>
+        // You can change an element:<br>
+        cars[0] = &quot;Toyota&quot;;<br><br>
+        // You can add an element:<br>
+        cars.push(&quot;Audi&quot;);<br>
+        </div>
+        </div>
+        <p>But you can NOT reassign the array:</p>
+        
+        <div class="w3-example  w3-pale-red">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh w3-border-red">
+        const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br>
+        <br>
+        cars = [&quot;Toyota&quot;, &quot;Volvo&quot;, &quot;Audi&quot;];&nbsp;&nbsp;&nbsp; // ERROR
+        </div>
+        </div>
+        
+        <hr>
+        <h2>Constant Objects</h2>
+        <p>You can change the properties of a constant object:</p>
+        <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh">
+        // You can create a const object:<br>
+        const car = {type:"Fiat", model:"500", color:"white"};<br><br>
+        // You can change a property:<br>
+        car.color = "red";<br><br>
+        // You can add a property:<br>
+        car.owner = "Johnson";</div>
+        </div>
+        
+        <p>But you can NOT reassign the object:</p>
+        
+        <div class="w3-example w3-pale-red">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh w3-border-red">
+        const car = {type:"Fiat", model:"500", color:"white"};<br>
+        <br>
+        car = {type:"Volvo", model:"EX60", color:"red"};&nbsp;&nbsp;&nbsp; // 
+          ERROR</div>
+        </div>
+        <hr>
+    </div>
+</body>
+</html>
+<script>
+    var thenum;//declaration
+    let thenum2;//provides block scope
+    //const num3; const declarations must be initialized
+    let jar1;
+    var jar2;// if the values are declared but didnt assigned any value then the variable will have the value undefined
+    var year=2000;
+    var number="one";
+    let value=true;
+    var ex='website';
+    const num1=200;//provides block scope
+    thenum=90;//assigning the value
+    thenum2=80;
+    let person = "John Doe", 
+    carName = "Volvo", 
+    price = 200; //You can declare many variables in one statement.Start the statement with let and separate the variables by comma:
+    console.log(num1,year,number,value,ex,thenum,thenum2,person,carName,price,jar1,jar2,$);
+    console.log(typeof(thenum));
+    console.log(typeof(number));
+    console.log(typeof(value));
+    const num = 0;
+    const obj = new String("0");
+    const str = "0";
+    const cars=["bmw","saab","volvo"];
+    cars[0]="breza";
+    cars.push("Twinkle");
+    console.log("Array is",cars);
+    const car = {type:"Fiat", model:"500", color:"white"};
+    car.owner="sudheer";
+    console.log("object is",car);
+    console.log(num === num); // true
+    console.log(obj === obj); // true
+    console.log(str === str); // true
+
+    console.log(num === obj); // false
+    console.log(num === str); // false
+    console.log(obj === str); // false
+    console.log(null === undefined); // false
+    console.log(obj === null); // false
+    console.log(obj === undefined); // false
+    var thenum;//If you re-declare a JavaScript variable declared with var, it will not lose its value.
+    let $="name";//Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names:
+    //Using the dollar sign is not very common in JavaScript, but professional programmers often use it as an alias for the main function in a JavaScript library.
+    //In the JavaScript library jQuery, for instance, the main function $ is used to select HTML elements. In jQuery $("p"); means "select all p elements".
+    /*let thenum2;
+    Variables defined with let cannot be Redeclared.
+    Variables defined with let must be Declared before use.
+    Variables defined with let have Block Scope.*/
+</script>
